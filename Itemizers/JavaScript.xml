@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemizer>
+
+	<recipe name="function.js">
+		<class>ESBaseItem</class>
+		<start-selector>function.js:has-child(name:capture(name)):capture(itemizer-firstused) + curly.brace.open.js</start-selector>
+		<end-selector>curly.brace.close.js</end-selector>
+		<subrecipes>
+			<include-root-recipes/>
+		</subrecipes>
+	</recipe>
+
+	<recipe name="block.js.hidden">
+		<class>ESCodeBlockItem</class>
+		<start-selector>curly.brace.open.js</start-selector>
+		<end-selector>curly.brace.close.js</end-selector>
+		<subrecipes>
+			<include-root-recipes/>
+		</subrecipes>
+	</recipe>
+	
+</itemizer>
